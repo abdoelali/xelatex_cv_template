@@ -1,0 +1,597 @@
+
+%% XeLaTeX CV Template
+%% by Abdallah El Ali
+
+
+%% Document Setup 
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass{article}
+\usepackage{titlesec}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+\usepackage{fontspec}
+\usepackage{eurosym}
+\setmainfont[Scale=1]{Times New Roman}
+
+\newfontfamily\myfont{Helvetica Neue}
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=0in,     % Length of section titles
+            marginparsep=.0in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=0mm,    % Length of section titles
+%            marginparsep=5.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage{paralist}
+
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{\marginparsep+\marginparwidth} % was \fancyfootoffset
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% PDF bookmarks
+\usepackage{xcolor,hyperref}
+
+% Define your colors, dear user!
+\definecolor{darkblue}{HTML}{033649}
+\definecolor{lightblue}{HTML}{6A6B69}
+\definecolor{maroon}{HTML}{666666} 
+
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%% End Document Setup 
+
+
+%% Helper Commands
+\newcommand{\makeheading}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                {\huge #1}\\[-0.0\baselineskip]%
+                
+         \end{minipage}}
+
+\newcommand{\makeheadingtwo}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+
+         \end{minipage}}
+         
+\newcommand{\makeheadingthree}[1]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+                 \rule{\columnwidth}{.6pt}%
+         \end{minipage}}
+
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{enumerate}[#1]}{\end{enumerate}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\vspace{-\baselineskip}\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{compactenum}[#1]}{\end{compactenum}}
+
+
+\newcommand\textbox[1]{%
+  \parbox{.333\textwidth}{#1}%
+}
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[2]}
+
+%% End Helper Commands 
+
+%% Begin CV Document 
+\begin{document}
+\makeheading{Abdallah~El Ali \\ \hfill}
+
+
+\makeheading{\normalsize Centrum Wiskunde \& Informatica, Science Park 123, 1098 XG, Amsterdam, The Netherlands \\ \hfill \textbf{t:} +31618\#\#\#\#\#\# || \textbf{e:} \href{mailto:xyz@pqr.com}{xyz@pqr.com} || \textbf{w:} \href{http://www.abdoelali.com/}{www.abdoelali.com}} 
+\makeheading{\normalsize \href{https://scholar.google.com/citations?user=sC9GVn8AAAAJ&hl=en}{Google Scholar}, \href{https://github.com/abdoelali}{GitHub}, \href{http://www.linkedin.com/in/abdoelali}{LinkedIn}, \href{https://twitter.com/abdoelali}{Twitter}, \href{http://www.slideshare.net/Abd0}{SlideShare} \hfill \textbox \textbox \hfill } 
+
+\makeheadingthree{\large \textcolor{lightblue}{} 
+}
+
+
+\vspace{-1pc}
+
+\section*{\textcolor{maroon}{\normalsize RESEARCH INTERESTS}} 
+
+Human-computer interaction (HCI), social computing, CSCW, ubiquitous computing, pervasive sensing
+
+\section*{\textcolor{maroon}{\normalsize EDUCATION}} 
+
+\textbf{PhD., \href{http://ivi.uva.nl/}{Computer Science}}  \hfill {Amsterdam, NL}
+\begin{outerlist}
+
+\item[] \href{http://www.uva.nl/en/home}{\textbf{University of Amsterdam}}\hfill {\textcolor{lightblue}{Apr, 2009 - Nov, 2013}}
+ \\ \href{http://ilps.science.uva.nl}{Information and Language Processing Systems group}  
+      \medskip
+
+              \begin{innerlist}[-]
+
+       \item My research (supervised by Dr. Frank Nack and Prof. Lynda Hardman) focused on context-awareness techniques and 3D gestural interaction input as means to minimize interaction with mobile devices.
+
+       \item Thesis: Minimal Mobile Human Computer Interaction
+
+	\end{innerlist}
+
+\end{outerlist}
+
+\medskip
+
+
+\textbf{M.Sc., 
+        \href{http://www.csca.nl/}
+             {Cognitive Science}} \hfill {Amsterdam, NL}
+\begin{outerlist}
+
+\item[] \href{http://www.uva.nl/en/home}{\textbf{University of Amsterdam}}  \hfill {\textcolor{lightblue}{Sept, 2006 - Aug, 2008}} \medskip
+
+        \begin{innerlist}[-]
+        \item Two-year program, Total ECTS: 124, Total Grade (Dutch Grading System): 8.4/10 (\href{http://en.wikipedia.org/wiki/Academic_grading_in_the_Netherlands}{GPA:} 3.71 or A) 
+        \item Thesis: Reproducing the Passage of Time: Effects of Stimulus Complexity, Quantity, and Cognitive Interference (Thesis Grade: 9.5/10)        
+        \end{innerlist}
+
+\end{outerlist}
+
+\medskip
+
+\textbf{B.A., 
+        \href{http://wwwlb.aub.edu.lb/~webengl/index.html}
+             {Linguistics (English Language)}} \hfill Beirut, LB
+
+\begin{outerlist}
+
+\item[] \href{http://www.aub.edu.lb/}{\textbf{American University of Beirut}} \hfill {\textcolor{lightblue}{Sept, 2002 - Jun, 2006}} \bigskip
+        \begin{innerlist}[-]
+        \item Four-year program (incl. Freshman year), Total Grade: 85/100 (\href{http://www.aub.edu.lb/registrar/Pages/academic-information.aspx}{GPA conversion} = 3.63 or A); Graduated with distinction
+        \item Minor in Cognitive Science, minor in Philosophy
+        \end{innerlist}
+
+\end{outerlist}
+
+
+
+\section*{\textcolor{maroon}{\normalsize EXPERIENCE}}
+
+\textbf{Tenure-track Researcher} \hfill {Amsterdam, NL}
+\begin{outerlist}
+
+\item[] \href{https://www.cwi.nl/}{\textbf{Centrum Wiskunde \& Informatica (CWI)}} \\ \href{http://www.dis.cwi.nl/}{Distributed \& Interactive Systems group}
+ 	   \hfill {\textcolor{lightblue}{Feb, 2018 - Present}}
+	   
+\medskip
+
+\begin{innerlist}[-]
+
+\item I am involved in (a) coordinating and helping write national and European ICT research proposals (b) co-supervising doctoral, master's, and bachelor's students. 
+\item I carry out independent HCI research (supervised by Dr. Pablo Cesar), where my focus is on designing, building, and evaluating technology in urban sensing and mobility for collective behavior understanding. I will be combining methods from human-computer interaction and machine learning to make sense of and predict user behavior from wearable sensor data. 
+
+\end{innerlist}
+
+\end{outerlist}
+
+\medskip
+
+
+\textbf{Postdoctoral Researcher} \hfill {Oldenburg, DE}
+\begin{outerlist}
+
+\item[] \href{https://www.uni-oldenburg.de/en/}{\textbf{University of Oldenburg}} / \href{http://www.offis.de/en/}{\textbf{OFFIS}} \\ Media Informatics and Multimedia Systems group
+ 	   \hfill {\textcolor{lightblue}{Feb, 2015 - Jan, 2018}}
+	   
+\medskip
+
+\begin{innerlist}[-]
+
+\item I am involved in (a) coordinating and helping write national and European ICT research proposals (b) co-supervising doctoral, master's, and bachelor's students (c) co-teaching bachelor and master's HCI courses.
+\item I carry out independent HCI research (supervised by Prof. Susanne Boll), of which projects include: (a) designing and evaluating sensor-based behavior tracking technology (b) running studies to understand mobile users in developing countries (c) large-scale mining of social media data and crowdsourcing to understand global crises (d) smartphone emoji keyboard layout reorganization using facial expression emotion recognition and crowdsourcing.
+
+\end{innerlist}
+
+\end{outerlist}
+
+\medskip
+\medskip
+
+\textbf{User Experience Designer}
+ \hfill {Amsterdam, NL}
+\begin{outerlist}
+
+\item[] \href{http://www.osudio.com/}{\textbf{Osudio}}
+ 	   \hfill {\textcolor{lightblue}{Jan, 2014 - Nov, 2014}}
+	   
+\medskip
+
+\begin{innerlist}[-]
+
+\item I helped win pitches, ran UX strategy sessions with clients, and designed e-commerce focused (responsive) digital experiences across web and other devices. This included market research, carrying out persona and Customer Experience Map sessions, conducting expert reviews, making concept designs, wireframing, and analyzing web analytics. Worked with agile, pure scrum, and waterfall processes.
+
+\end{innerlist}
+
+\end{outerlist}
+
+
+
+\medskip
+\textbf{Research Intern}\hfill {Berlin, DE}
+ 
+\begin{outerlist}
+
+\item[]  \href{http://www.laboratories.telekom.com/public/English/Pages/default.aspx}{\textbf{Telekom Innovation Laboratories}}  \\ Quality \& Usability Lab 
+
+ 	   \hfill {\textcolor{lightblue}{Apr, 2012 - Jun, 2012}}
+	   
+	   \medskip
+
+\begin{innerlist}[-]
+
+\item Designed and executed (with Dr. Hamed Ketabdar) (a) a usability study (part of the MagiThings Project) on magnet-based gesture interaction for music composition (El Ali et al., 2013) (b) a usability and security study on the use of magnet-based air signatures for user authentication (El Ali \& Ketabdar, 2015).
+
+\end{innerlist}
+
+\end{outerlist}
+
+
+
+\medskip
+\textbf{Research Intern}
+ \hfill {Tampere, FI}   
+
+\begin{outerlist}
+
+\item[] \href{http://research.nokia.com/}{\textbf{Nokia Research Center (NRC)}} \\ Organic User Interfaces team%
+ 	   \hfill {\textcolor{lightblue}{Apr, 2011 - Jul, 2011}}
+	   
+\medskip
+
+\begin{innerlist}[-]
+
+\item Helped in setting up, data analysis, and writing up of a large-scale in-the-wild qualitative user study on mobile interaction with public interfaces (Holopainen et al., 2011).
+\item Designed and executed (with NRC Helsinki) a usability study that investigated effects of error on device-based gesture interaction (El Ali et al., 2012; best student paper award).
+
+\end{innerlist}
+
+\end{outerlist}
+
+
+
+\medskip
+
+\textbf{Research Assistant}
+ \hfill {Amsterdam, NL}
+\begin{outerlist}
+
+\item[]  \href{http://www.leibnizcenter.org/}{\textbf{Leibniz Center for Law (Research Institute)}} \hfill {\textcolor{lightblue}{Sep 4, 2007 - Dec 31, 2008}}
+
+	   \medskip
+
+\begin{innerlist}[-]
+
+\item Modeled Dutch legislation in the Web Ontology Language (OWL-DL), with the aim of providing Semantic Web compliant automated normative assessment services as part of the \href{http://www.estrellaproject.org/}{ESTRELLA} EU project.
+\end{innerlist}
+
+\end{outerlist}
+
+
+\section*{\textcolor{maroon}{\normalsize PROJECTS}} 
+
+\begin{enumerate}
+
+\item \textbf{SmartINSIDE:} The \href{https://www.eurostars-eureka.eu/project/id/5262}{SmartINSIDE} project aims at developing a complete integrated solution for indoor navigation services within large sites. Thanks to a unique technological hardware and software infrastructure, indoor navigation will be cheaper, more efficient, and accessible to any user with a standard mobile phone. \textbf{Date:} 2010-2012. \textbf{Budget:} \euro 1,590,000. \textbf{Role:} Researcher.
+
+\item \textbf{MOCATOUR:} The aim of the "Mobile Cultural Access for Tourists" (\href{https://mocatour.wordpress.com/}{MOCATOUR}) project is to provide personalized cultural information access to tourists. An overarching goal is to establish a network of culture servers in the centre of Amsterdam (around the Dam and Museumsplein), where tourists can access personalised cultural and historic information. \textbf{Date:} 2009-2011. \textbf{Budget:} \euro 968,280. \textbf{Role:} Researcher.
+
+\item \textbf{ESTRELLA:} The European project for Standardized Transparent Representations in order to Extend Legal Accessibility \href{http://www.estrellaproject.org/}{(Estrella, IST-2004-027655)} aims to develop and validate an open, standards-based platform allowing public administrations to develop and deploy comprehensive legal knowledge management solutions, without becoming dependent on proprietary products of particular vendors. \textbf{Date:} 2006-2008. \textbf{Budget:} \euro 3,811,943. \textbf{Role:} Researcher.
+
+\end{enumerate}
+
+
+
+\section*{\textcolor{maroon}{\normalsize PROPOSAL WRITING}} 
+
+\begin{enumerate}
+
+\item Edited and contributed to DFG Priority Programme proposal on "Scalable Pervasive Interactions". 
+
+\item Edited and proofread DFG proposal on "Take Over Requests in Automated Driving". 
+
+\item Contributed to an ERC consolidator grant proposal on guiding human attention with digital technology for interacting with cyber-physical system (ATTENTION).
+
+\item Successfully coordinated and contributed to H2020 grant proposal on "Monitoring and Early Diagnosis of fraiLty in the ElderlY" (MEDLEY).
+
+\end{enumerate}
+
+
+\section*{\textcolor{maroon}{\normalsize AWARDS}} 
+
+\begin{innerlist}[-]
+
+\item Best paper honorable mention at SUI 2017
+
+\item CHI 2016 excellent reviewer
+
+\item Won the FNWI (Faculty of Science) 2nd Science Slam (2013) for most exciting research. Certificate available
+
+\item Best student paper award at ICMI 2012
+
+\item Best workshop paper at Please Enjoy workshop at MobileHCI 2011
+
+\item Awarded National Science Foundation (NSF) travel grant for ICMI-MLMI 2010 (Beijing, China)
+
+\item Dean's Honor List (American University of Beirut): Spring (2003, 2004, 2005), Fall (2005, 2006)
+
+\end{innerlist}
+
+
+
+\section*{\textcolor{maroon}{\normalsize PRESS}} 
+
+
+\begin{innerlist}[-]
+
+\item VapeTracker in the VapingPost. \href{http://www.vapingpost.com/2016/04/08/new-technology-a-cessation-tool-for-vapers/}{New Technology: A cessation tool for vapers}
+
+\end{innerlist}
+
+
+\section*{\textcolor{maroon}{\normalsize INVITED TALKS}} 
+
+\begin{innerlist}[-]
+\item \textcolor{lightblue}{2016:} Challenges in measuring and understanding cross-cultural crisis news media bias on Twitter. \href{http://www.gesis.org/css-wintersymposium/home/}{3rd GESIS Computational Social Science Winter Symposium 2016} (Cologne, DE). 
+
+\item \textcolor{lightblue}{2015:} Urban data and wayfinding in developing countries (2015). \href{https://www.cwi.nl/research-groups/Information-Access}{Centrum Wiskunde \& Informatica (CWI)} - Information Access (Amsterdam, NL). 
+
+\item \textcolor{lightblue}{2015:} Leveraging Flickr photos to build exploration-based route planners. \href{https://pitlab.itu.dk/}{Pervasive Interaction Technology (PIT) Laboratory} (Copenhagen, DK)
+
+\item \textcolor{lightblue}{2011, 2012:} Introduction to multimodal interaction (slides \href{http://www.slideshare.net/Abd0/multimodal-interaction-an-introduction}{here.)} \href{http://www.uva.nl/en/home}{University of Amsterdam} (NL)
+\end{innerlist}
+
+
+\section*{\textcolor{maroon}{\normalsize PUBLICATIONS}} 
+
+\textbf{Journal}
+
+\begin{enumerate}
+
+\item  \textbf{El Ali, A.} \& Ketabdar, H. (2013). \href{http://abdoelali.com/pdfs/ijmhci_ADI_play_preprint.pdf}{Magnet-based Around Device Interaction for Playful Music Composition and Gaming.} In the International Journal of Mobile Human Computer Interaction (IJMHCI), 5, 4, p.56-80.
+
+\item  \textbf{El Ali, A.}, Nack, F. \& Hardman, L. (2011). \href{http://www.igi-global.com/article/good-times-problems-design-considerations/55395}{Good Times?! 3 Problems and Design Considerations for Playful HCI.} In the International Journal of Mobile Human-Computer Interaction (IJMHCI), 3, 3, p.50-65. 
+
+\end{enumerate}
+
+\textbf{Conference}
+
+\begin{enumerate}
+
+\item Gr{\"u}nefeld, U., \textbf{El Ali, A.}, Heuten, W., \& Boll, S. (2018). Beyond Halo and Wedge: Visualizing Out-of-View Objects on Head-mounted Virtual and Augmented Reality Devices. To be published in Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '18). Barcelona, Spain. 
+
+\item Gr{\"u}nefeld, U., Stratmann, T., \textbf{El Ali, A.}, Heuten, W., \& Boll, S. (2018). RadialLight: Exploring Radial Peripheral LEDs for Direction Cues in Head-Mounted Displays. To be published in Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '18). Barcelona, Spain. 
+
+\item \textbf{El Ali, A.}, Stratmann, T., Park, S., Heuten, W. \& Boll, S. (2018). Measuring, Understanding, and Classifying News Media Sympathy on Twitter after Crisis Events. To be published in Proc. Human Factors in Computing Systems (CHI '18). Montr\'{e}al, Canada.
+
+\item Gr{\"u}nefeld, U., Ennenga, D., \textbf{El Ali, A.}, Heuten, W., \& Boll, S. (2017). EyeSee360: Designing a Visualization Technique for Out-of-view Objects in Head-mounted Augmented Reality. In Proc. Spatial User Interaction (SUI '17). Brighton, UK. \textcolor{red}{\textbf{[Best paper honorable mention]}}
+
+\item Gr{\"u}nefeld, U., \textbf{El Ali, A.}, Heuten, W., \& Boll, S. (2017). Visualizing Out-of-view Objects in Head-mounted Augmented Reality. In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '17 EA). Vienna, Austria.
+
+\item \textbf{El Ali, A.}, Wallbaum, T., Wasmann, M., Heuten, W. \& Boll, S. (2017). \href{http://abdoelali.com/pdfs/CHI17_lbw_face2emoji.pdf}{Face2Emoji: Using Facial Emotional Expressions to Filter Emojis.} In Proc. Human Factors in Computing Systems (CHI '17 EA). Denver, Colorado, USA. 
+
+\item Koelle, M., \textbf{El Ali, A.}, Heuten, W., Cobus, V., \& Boll, S. (2017). All about Acceptability? - Identifying Factors for the Adoption of Data Glasses. In Proc. Human Factors in Computing Systems (CHI '17). Denver, CO, USA.
+
+\item Meyer, J., Wasmann, M., Heuten, W.,  \textbf{El Ali, A.}, \& Boll, S. (2017). Identification and Classification of Usage Patterns in Long-Term Activity Tracking. In Proc. Human Factors in Computing Systems (CHI '17). Denver, CO, USA.
+
+\item Cobus, V., Br\"{a}uer, N., Pistoor, A., Precht, H.,  \textbf{El Ali, A.}, \& Boll, S. (2016). Badum Tss! - A Paper-based Interaction to Augment Everyday Situations with Sound Effects. In Adj. Proc. Nordic Conference on Human-Computer Interaction (NordiCHI '16). Gothenburg, Sweden.
+
+\item Sadeghian, S.,  \textbf{El Ali, A.}, Heuten, W., \& Boll, S. (2016). Peripheral Light Cues for In-Vehicle Task Resumption. In Proc. Nordic Conference on Human-Computer Interaction (NordiCHI '16). Gothenburg, Sweden.
+
+\item \textbf{El Ali, A.}, Bachour, K., Heuten, W. \& Boll, S. (2016). \href{http://abdoelali.com/pdfs/mobilehci2016_el_ali_preprint.pdf}{Technology Literacy in Poor Infrastructure Environments: Characterizing Wayfinding Strategies in Lebanon.} In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '16). Florence, Italy. 
+
+\item Matviienko, A., Loecken, A., \textbf{El Ali, A.}, Heuten, W. \& Boll, S. (2016). NaviLight: Investigating Ambient Light Displays for Turn-by-Turn Navigation in Cars. In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '16). Florence, Italy. 
+
+\item \textbf{El Ali, A.}, Matviienko, A., Feld, Y., Heuten, W. \& Boll, S. (2016). \href{http://abdoelali.com/pdfs/CHI16_lbw_vapetracker_camready}{VapeTracker: Tracking Vapor Consumption to Help E-cigarette Users Quit.} In Proc. Human Factors in Computing Systems (CHI '16 EA). San Jose, CA, USA.
+
+\item  \textbf{El Ali, A.}, \& Ketabdar, H. (2015). Investigating Handedness in Air Signatures for Magnetic 3D Gestural User Authentication. In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '15 EA). Copenhagen, Denmark.
+
+\item Wolbert, M. \&  \textbf{El Ali, A.} \& Nack, F. (2014). \href{http://abdoelali.com/pdfs/CountMeIn_preprint.pdf}{CountMeIn: Evaluating Social Presence in a Collaborative Pervasive Mobile Game Using NFC and Touchscreen Interaction.} In Proc. Advances in Computer Entertainment Technology (ACE '14). Madeira, Portugal.
+
+\item Wolbert, M. \&  \textbf{El Ali, A.} (2013). \href{http://abdoelali.com/pdfs/p522-wolbert.pdf}{Evaluating NFC and Touchscreen Interactions in Collaborative Mobile Pervasive Games.} In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '13 EA). Munich, Germany.
+
+\item \textbf{El Ali, A.}, van Sas, S. \& Nack, F. (2013). \href{http://abdoelali.com/pdfs/p985-el-ali.pdf}{Photographer Paths: Sequence Alignment of Geotagged Photos for Exploration-based Route Planning.} In Proc. Computer-Supported Cooperative Work and Social Computing (CSCW '13). San Antonio, Texas.
+
+\item \textbf{El Ali, A.}, Kildal, J. \& Lantz, V. (2012). \href{http://abdoelali.com/pdfs/fp129-elali.pdf}{Fishing or a Z?: Investigating the Effects of Error on Mimetic and Alphabet Device-based Gesture Interaction.} In Proc. International Conference on Multimodal Interaction (ICMI '12). Santa Monica, California, USA. \textbf{\textcolor{red}{[Best student paper award]}}
+
+\item Bouwer, A., Nack, F. \&  \textbf{El Ali, A.} (2012). Lost in Navigation: Evaluating a Mobile Map App for a Fair. In Proc. International Conference on Multimodal Interaction (ICMI '12). Santa Monica, California, USA.
+
+\item Holopainen, J., Lucero, A., Saarenp\"{a}\"{a}, H., Nummenmaa,  \textbf{El Ali, A.}, \& Jokela, T. (2011). \href{http://abdoelali.com/pdfs/a23-holopainen.pdf}{Social and Privacy Aspects of a System for Collaborative Public Expression.} In Proc. Advances in Computer Entertainment Technology (ACE '11). Lisbon, Portugal.
+
+\item  \textbf{El Ali, A.}, Nack, F. \& Hardman, L. (2010). \href{http://abdoelali.com/pdfs/ICMI2010_camready_final.pdf}{Understanding contextual factors in location-aware multimedia messaging.} In Proc. International Conference on Multimodal Interaction (ICMI '10). Beijing, China.
+
+\item Nack, F.,  \textbf{El Ali, A.}, van Kemenade, P., Overgoor, J. and van der Weij., B. (2010). \href{http://abdoelali.com/pdfs/nack_storytogo-2010.pdf}{A story to go, please.} In Proc. International Conference on Interactive Digital Storytelling (ICIDS '10). Edinburgh, Scotland.
+
+\item van de Ven, S., Hoekstra, R., Breuker, J., Wortel, L., \&  \textbf{El Ali, A.} (2008) \href{http://abdoelali.com/pdfs/owled2008dc_paper_6.pdf}{Judging Amy: Automated legal assessment using OWL 2.} In Proc. OWL: Experiences and Directions (OWLED 2008). Karlsruhe, Germany.
+
+\end{enumerate}
+
+\textbf{Other}
+
+\begin{enumerate}
+
+\item \textbf{El Ali, A.} (2013). \href{http://abdoelali.com/pdfs/phdthesis_abdallah_elali.pdf}{Minimal Mobile Human Computer Interaction.} Ph.D. Thesis, University of Amsterdam.
+
+\item  \textbf{El Ali, A.} (2011). \href{http://abdoelali.com/pdfs/mobilehci2011_DC_elali.pdf}{Studying and Designing for Mobile Social Awareness Cues in Urban Interactions.} In Proc. Human-Computer Interaction with Mobile Devices and Services (MobileHCI '11 EA). Doctoral Consortium, Stockholm, Sweden.
+
+\item  \textbf{El Ali, A.}, Lucero, A. \& Aaltonen, V. (2011). \href{http://www.medien.ifi.lmu.de/mobilegestures2011/Accepted_Papers_files/MobileGestures2011-Accepted-Submissions.zip}{Multimodal Interaction Design in Collocated Mobile Phone Use.} In Proc. MobileGestures 2011 workshop at Human-Computer Interaction with Mobile Devices and Services (MobileHCI '11). Stockholm, Sweden.
+
+\item  \textbf{El Ali, A.}, Nack, F. \& Hardman, L. (2010). \href{http://abdoelali.com/pdfs/playfulnesswsali.pdf}{Good Times?! Playful Aspects of Location-based Experience Capture}. In Proc. Please Enjoy 10 workshop at Human-Computer Interaction with Mobile Devices and Services (MobileHCI '10). Lisbon, Portugal. \textbf{\textcolor{red}{[Best workshop paper award]}}
+
+\item  \textbf{El Ali, A.} \& Nack, F. (2009). \href{http://abdoelali.com/pdfs/MLL09_Proceedings.pdf}{Touring in a Living Lab: some methodological considerations.} In Proc. Mobile Living Labs 09 workshop at Human-Computer Interaction with Mobile Devices and Services (MobileHCI '09). Bonn, Germany.
+
+\end{enumerate}
+
+
+
+\section*{\textcolor{maroon}{\normalsize TEACHING}} 
+
+\textbf{Courses Co-taught}
+
+\begin{innerlist}[-]
+
+\item \textcolor{lightblue}{2015, 2016:}  Bsc course `Interaktive Systeme'; Msc course 'Human Computer Interaction'; Msc course `Wearable Computing'
+
+\item \textcolor{lightblue}{2010, 2011, 2012:}  Msc Information Science course `Intelligent Interactive Systems'. Designed and executed entire practical course syllabus from scratch.
+
+\item \textcolor{lightblue}{2009, 2010:} Bsc course `Human-Centered Multimedia'
+
+\item \textcolor{lightblue}{2009, 2010:} Bsc course `Knowledge-based Media Systems'
+
+\end{innerlist}
+
+\bigskip
+
+\textbf{Students Supervised}
+
+\begin{innerlist}[-]
+
+\item \textcolor{lightblue}{2016:} Rieke Von Bargen (Bsc Informatics) || \textit{Wearable Vibro-tactile Pedestrian Navigation}
+ 
+\item \textcolor{lightblue}{2013:} Michael Wolbert (Msc Information Science) || \textit{Improving the Waiting Time Experience Through a Pervasive Collaborative NFC-enabled Mobile Game}
+
+\item \textcolor{lightblue}{2013:} Patrick Mast (Msc Artificial Intelligence) ||
+ \textit{Applying Sequence Alignment Techniques to Give Personalized Travel Suggestions}
+ 
+\item \textcolor{lightblue}{2013:} Bardia Khalesi (Msc Artificial Intelligence) ||
+ \textit{Using Social Network Analysis Techniques on Foursquare data for Location-Based Recommendations}
+ 
+\item \textcolor{lightblue}{2011:} Theresa Kriese (Msc Information Science) ||
+ \textit{Measuring User Experience of User-defined Cross-domain Motion Gestures}
+ 
+\item \textcolor{lightblue}{2011:} Haska Steltenpohl (Bsc Information Science) ||
+ \textit{Visualizing Route Information on Mobile Devices}
+
+
+\item \textcolor{lightblue}{2010:} Sicco van Sas (Bsc Artificial Intelligence) ||
+ \textit{Generating route recommendations using geotagged Flickr photos and sequence alignment}
+
+\item \textcolor{lightblue}{2009:} Jan Overgoor, Philo van Kemenade, Bastiaan van der Weij (Bsc Artificial Intelligence) ||
+\textit{Narranotation: Mobile storytelling using a context-free grammar}
+
+\end{innerlist}
+
+
+\section*{\textcolor{maroon}{\normalsize SKILLS}}
+
+\begin{itemize}[]
+
+\item \textbf{User Research} 
+
+User-centered design, usability testing (controlled, field), remote testing (A/B, MVT), contextual inquiry, heuristic evaluation, card sorting, Wizard-of-Oz, interviews (+ open coding), surveys, affinity diagramming
+
+\item \textbf{Data Science} 
+
+Social media data (Twitter, Flickr) crawling, cleaning and analysis; facial emotion recognition using deep convolutional neural networks (TFlearn, TensorFlow); crowdsourcing; descriptive and inferential statistics (incl. correlation, regression, ANOVA, t-test, chi-square, factor analysis); applied machine learning (supervised, unsupervised); R (incl. ggplot2), Python (incl. Pandas, NumPy, SciPy, OpenCV, ScikitLearn), iPython, SQL
+
+\item \textbf{Soft Skills} 
+
+Mentoring colleagues / students, coordinating and writing grant proposals, scientific and non-scientific presentations 
+
+\item \textbf{Languages} 
+
+Arabic (native), English (fluent), Dutch (intermediate), German (basic)
+
+\end{itemize}
+
+
+
+\section*{\textcolor{maroon}{\normalsize COURSES \& WORKSHOPS}}
+
+\begin{innerlist}[-]
+
+\item \href{http://userinterfaces.aalto.fi/computationalinteraction/}{2nd Summer School on Computational Interaction}. Certificate available.
+
+\item \href{https://www.coursera.org/account/accomplishments/certificate/BS3AYZVDLB}{R Programming}. Johns Hopkins University (Coursera). Grade: 97\%. Certificate available
+
+\item \href{https://analyticsacademy.withgoogle.com/course}{Google Analytics - Digital Analytics Fundamentals} - Score: 94\%
+
+\item \href{http://studiegids.uva.nl/web/sgs/en/c/2000.html}{Information Visualization (Master's AI course)}
+
+\item \href{http://www.science.uva.nl/amstelinstituut/higher/object.cfm/029CE488-1321-B0BE-A47D457360CDD7FD}{Teaching Skills for Science Teaching Assistants}. Certificate available
+
+\item \href{http://studiegids.uva.nl/web/sgs/en/c/2000.html}{Machine Learning: Pattern Recognition (Master's AI course)}
+
+\item \href{http://www.unimaas.nl/datamining/}{SIKS Summer School on Data Mining} 
+
+\item \href{http://www.ubioulu.fi/en/UBI-summer-school-2010}{UBI Summer School 2010 on Ubiquitous Computing}. Grade: 5/5. Workshop `Urban Social Network Analysis'
+
+\item \href{http://hmi.ewi.utwente.nl/lenteschool2010/introduction}{2nd NIRICT-SIKS Spring School} - Social Interaction Computing
+
+\item \href{http://www.csca.nl/}{Cognitive Modeling}. CSCA summer school
+
+\end{innerlist}
+
+
+
+\section*{\textcolor{maroon}{\normalsize SERVICE}}
+
+\begin{innerlist}[-]
+
+\item  {\textbf{\href{https://mobilehci.acm.org/2018/}{ACM MobileHCI 2018}} - Associate Chair} 
+
+\item  {\textbf{\href{http://www.mmsys2018.org/}{ACM Multimedia Systems 2018}} - Local Chair} 
+
+\item  {\textbf{\href{https://hci.uni-oldenburg.de/}{HCI Oldenburg Website}} - Web Developer} 
+
+\item  {\textbf{\href{http://www.auto-ui.org/17/}{ACM AutomotiveUI 2017}} - Local Chair} 
+
+\item  {\textbf{\href{http://iw2016.offis.de/}{Inventors Workshop (2016)}} - Co-organizer, Web Developer} 
+
+\item  {\textbf{\href{https://events.withgoogle.com/google-nl-startup-week/}{Google NL Startup Week (2015)}} - UX Mentor} 
+
+\item  {\textbf{\href{http://careerfoundry.com/}{CareerFoundry UX Hackathon (2015)}} - UX Mentor} 
+
+\item  {\textbf{\href{http://congres.svia.nl/}{AWESOME IT (2011)}} -  Program Chair} 
+
+\item \textbf{Conference \& Journal reviewer}: CHI (2018, 2017, 2016, 2013, 2012); CSCW (2018, 2017, 2016, 2015, 2013); MobileHCI (2017, 2016, 2015, 2013);  DIS (2018, 2017, 2012); AutoUI (2017, 2015); TVX (2018); CHI Play (2015); UIST (2013); ICMI (2011); CIE
+
+\end{innerlist}
+
+
+\end{document}
+%% End CV Document
